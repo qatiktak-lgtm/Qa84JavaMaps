@@ -48,8 +48,8 @@ public class MainStringMap {
         for (int i = 0; i < s.length(); i++) {
             char sym = s.charAt(i);
             if (map.containsKey(sym) == false) {
-                map.put(sym, 1); // put - лучше для добавления новых
-            } else {
+//                map.put(sym, 1); // put - лучше для добавления новых
+//            } else {
                 int value = map.get(sym);
                 value++;
                 map.replace(sym, value); // replace лучше для изменения уже существующих (с защитой от ...
