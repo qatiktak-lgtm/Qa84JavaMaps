@@ -32,7 +32,7 @@ public class MainStringMap {
             }
         }
         //теперь нужно распечатать нов обратном алф.порядке
-        //Set<String> keys = map.descendingKeySet();
+        //Возможен вариант с: Set<String> keys = map.descendingKeySet();
         Set<String> keys = map.keySet();
         for (String key : keys) {
             System.out.print(key + " = ");
@@ -44,11 +44,12 @@ public class MainStringMap {
     }
 
     public static void printCharsValues(String s) {
-        TreeMap<Character, Integer> map = new TreeMap<>(); ///заполнение Map (почему мы взяли TreeMap?)
+        TreeMap<Character, Integer> map = new TreeMap<>();
+        //заполнение Map (почему мы взяли TreeMap?)
         for (int i = 0; i < s.length(); i++) {
             char sym = s.charAt(i);
             if (map.containsKey(sym) == false) {
-//                map.put(sym, 1); // put - лучше для добавления новых
+//                map.put(sym, 1); // Вариант с put - лучше для добавления новых
 //            } else {
                 int value = map.get(sym);
                 value++;
